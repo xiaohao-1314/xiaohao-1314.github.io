@@ -3,14 +3,16 @@
 
 	<head>
 		
-<title>Hello World-Quiet</title>
+<title>ES6-扩展运算符-Quiet</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" type="image/x-icon" href="/image/img.ico">
 
-<meta name="keywords" content="hexo,小豪博客，博客，小豪">
-<meta name="description" content="描述">
+
+<meta name="keywords" content="ES6 扩展运算符,">
+<meta name="description" content="<h3 id="扩展运算符能将-数组-转换为逗号分隔的-参数序列"><a href="#扩展运算符能将-数组-转换为逗号分隔的-参数序列" class="headerlink" title="[..]扩展运算符能将[数组]转换为逗号分隔的[参数序列]"></a>[..]扩展运算符能将[数组]转换为逗号分隔的[参数序列]</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">//声明一个数组...</span><br><span class="line">const tfboys = [<span class="string">&#x27;易烊千玺&#x27;</span>,<span class="string">&#x27;王源&#x27;</span>,<span class="string">&#x27;王俊凯&#x27;</span>];</span><br><span class="line"></span><br><span class="line">//声明一个函数</span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">wang</span></span>() &#123;</span><br><span class="line">    console.log(arguments);</span><br><span class="line">  &#125;</span><br><span class="line">  wang(tfboys);//0: (3) [<span class="string">&quot;易烊千玺&quot;</span>, <span class="string">&quot;王源&quot;</span>, <span class="string">&quot;王俊凯&quot;</span>] 只有一个</span><br><span class="line">  wang(...tfboys);</span><br><span class="line">//   0: <span class="string">&quot;易烊千玺&quot;</span></span><br><span class="line">//   1: <span class="string">&quot;王源&quot;</span></span><br><span class="line">//   2: <span class="string">&quot;王俊凯&quot;</span></span><br></pre></td></tr></table></figure>
+<h3 id="扩展运算符的应用"><a href="#扩展运算符的应用" class="headerlink" title="扩展运算符的应用"></a>扩展运算符的应用</h3><p>1)数组的合并</p>">
 
 
 <script src="/js/jquery.min.js"></script>
@@ -243,8 +245,12 @@
     <div class="bg-content">
         <ul class="tag">
             
+            
+            <li><a href="/tags/ES6 扩展运算符">ES6 扩展运算符</a></li>
+            
+            
         </ul>
-        <h1>Hello World</h1>
+        <h1>ES6-扩展运算符</h1>
         <div class="article-info">
             <div class="article-author">
                 
@@ -256,27 +262,25 @@
                 </svg>
                 
                 <span> <a href="">Xiao Hao</a></span>
-                <p>2022-04-03 23:33:56</p>
+                <p>2021-06-03 14:05:39</p>
             </div>
         </div>
     </div>
 </div>
 <div class="article-content">
     <div id="article" class="content">
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<p>js中的DOM操作<br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/zxt-17862802783/p/7498790.html">https://www.cnblogs.com/zxt-17862802783/p/7498790.html</a></p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+        <h3 id="扩展运算符能将-数组-转换为逗号分隔的-参数序列"><a href="#扩展运算符能将-数组-转换为逗号分隔的-参数序列" class="headerlink" title="[..]扩展运算符能将[数组]转换为逗号分隔的[参数序列]"></a>[..]扩展运算符能将[数组]转换为逗号分隔的[参数序列]</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">//声明一个数组...</span><br><span class="line">const tfboys = [<span class="string">&#x27;易烊千玺&#x27;</span>,<span class="string">&#x27;王源&#x27;</span>,<span class="string">&#x27;王俊凯&#x27;</span>];</span><br><span class="line"></span><br><span class="line">//声明一个函数</span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">wang</span></span>() &#123;</span><br><span class="line">    console.log(arguments);</span><br><span class="line">  &#125;</span><br><span class="line">  wang(tfboys);//0: (3) [<span class="string">&quot;易烊千玺&quot;</span>, <span class="string">&quot;王源&quot;</span>, <span class="string">&quot;王俊凯&quot;</span>] 只有一个</span><br><span class="line">  wang(...tfboys);</span><br><span class="line">//   0: <span class="string">&quot;易烊千玺&quot;</span></span><br><span class="line">//   1: <span class="string">&quot;王源&quot;</span></span><br><span class="line">//   2: <span class="string">&quot;王俊凯&quot;</span></span><br></pre></td></tr></table></figure>
+<h3 id="扩展运算符的应用"><a href="#扩展运算符的应用" class="headerlink" title="扩展运算符的应用"></a>扩展运算符的应用</h3><p>1)数组的合并</p>
+<span id="more"></span>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">const kuaizi = [<span class="string">&#x27;王太利&#x27;</span>,<span class="string">&#x27;肖央&#x27;</span>];</span><br><span class="line">const fenghuang = [<span class="string">&#x27;曾毅&#x27;</span>,<span class="string">&#x27;玲花&#x27;</span>];</span><br><span class="line">//以前的做法就是concat()</span><br><span class="line">// const zuixuanxiaopingguo = kuaizi.concat(fenghuang);</span><br><span class="line"></span><br><span class="line">//但现在可以使用扩展运算符</span><br><span class="line">const  zuixuanxiaopingguo = [...kuaizi,...fenghuang];</span><br><span class="line">console.log(zuixuanxiaopingguo);//[<span class="string">&#x27;王太利&#x27;</span>,<span class="string">&#x27;肖央&#x27;</span>,<span class="string">&#x27;曾毅&#x27;</span>,<span class="string">&#x27;玲花&#x27;</span>]</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>2)数组克隆</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">const sanzhihua = [<span class="string">&#x27;E&#x27;</span>,<span class="string">&#x27;G&#x27;</span>,<span class="string">&#x27;M&#x27;</span>];</span><br><span class="line">const sanyecao = [...sanzhihua];</span><br><span class="line">console.log(sanyecao);//[<span class="string">&#x27;E&#x27;</span>,<span class="string">&#x27;G&#x27;</span>,<span class="string">&#x27;M&#x27;</span>]</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>3)将伪数组转为真正的数组</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div&gt;&lt;/div&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        const divs = document.querySelectorAll(<span class="string">&#x27;div&#x27;</span>);</span><br><span class="line">        const divArr = [...divs];</span><br><span class="line">        console.log(divArr);//[div,div,div] 变成真正的数组    </span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 
     </div>
 </div>
@@ -306,12 +310,19 @@
 </script>
 <div class="Last-Next">
     
+    <a href="/2021/06/03/ES6-Symbol%E7%B1%BB%E5%9E%8B%E7%9A%84%E8%AE%A4%E8%AF%86/">
+        <div class="last">
+            <span>上一篇</span>
+            <p>ES6-Symbol类型的认识</p>
+        </div>
+    </a>
+    
 
     
-    <a href="/2022/04/02/My-New-Post/">
+    <a href="/2021/06/03/ES6-rest%E5%8F%82%E6%95%B0/">
         <div class="next">
             <span>下一篇</span>
-            <p>My New Post</p>
+            <p>ES6-rest参数</p>
         </div>
     </a>
     

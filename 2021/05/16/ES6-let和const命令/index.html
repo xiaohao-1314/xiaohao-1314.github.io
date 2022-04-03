@@ -3,14 +3,21 @@
 
 	<head>
 		
-<title>Hello World-Quiet</title>
+<title>ES6 let和const命令-Quiet</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" type="image/x-icon" href="/image/img.ico">
 
-<meta name="keywords" content="hexo,小豪博客，博客，小豪">
-<meta name="description" content="描述">
+
+<meta name="keywords" content="ES6 let和const命令,">
+<meta name="description" content="<h2 id="let命令"><a href="#let命令" class="headerlink" title="let命令"></a>let命令</h2><p>1.变量不能重复声明</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">let</span> star=<span class="string">&#x27;罗志祥&#x27;</span>;</span><br><span class="line"><span class="built_in">let</span> star=<span class="string">&#x27;小猪&#x27;</span>  //error</span><br></pre></td></tr></table></figure>
+<p>2.let有块级作用域，全局，函数，eval</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="built_in">let</span> girl=<span class="string">&#x27;周扬青&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line">console.log(girl) //error</span><br></pre></td></tr></table></figure>
+<p>不仅仅针对花括号，例如if（）里面</p>
+<p>3.不存在变量提前</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">console.log(song)   //error</span><br><span class="line"><span class="built_in">let</span> song=<span class="string">&#x27;时间管理大师&#x27;</span></span><br></pre></td></tr></table></figure>">
 
 
 <script src="/js/jquery.min.js"></script>
@@ -243,8 +250,12 @@
     <div class="bg-content">
         <ul class="tag">
             
+            
+            <li><a href="/tags/ES6 let和const命令">ES6 let和const命令</a></li>
+            
+            
         </ul>
-        <h1>Hello World</h1>
+        <h1>ES6 let和const命令</h1>
         <div class="article-info">
             <div class="article-author">
                 
@@ -256,28 +267,32 @@
                 </svg>
                 
                 <span> <a href="">Xiao Hao</a></span>
-                <p>2022-04-03 23:33:56</p>
+                <p>2021-05-16 15:05:04</p>
             </div>
         </div>
     </div>
 </div>
 <div class="article-content">
     <div id="article" class="content">
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<p>js中的DOM操作<br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/zxt-17862802783/p/7498790.html">https://www.cnblogs.com/zxt-17862802783/p/7498790.html</a></p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+        <h2 id="let命令"><a href="#let命令" class="headerlink" title="let命令"></a>let命令</h2><p>1.变量不能重复声明</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">let</span> star=<span class="string">&#x27;罗志祥&#x27;</span>;</span><br><span class="line"><span class="built_in">let</span> star=<span class="string">&#x27;小猪&#x27;</span>  //error</span><br></pre></td></tr></table></figure>
+<p>2.let有块级作用域，全局，函数，eval</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="built_in">let</span> girl=<span class="string">&#x27;周扬青&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line">console.log(girl) //error</span><br></pre></td></tr></table></figure>
+<p>不仅仅针对花括号，例如if（）里面</p>
+<p>3.不存在变量提前</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">console.log(song)   //error</span><br><span class="line"><span class="built_in">let</span> song=<span class="string">&#x27;时间管理大师&#x27;</span></span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<p>4.不影响作用域链</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">let</span> school=<span class="string">&#x27;abc&#x27;</span></span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">fn</span></span>()&#123;</span><br><span class="line">    console.log(school) //abc</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>案例</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">&quot;en&quot;</span>&gt;</span><br><span class="line">&lt;<span class="built_in">head</span>&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">&quot;UTF-8&quot;</span>&gt;</span><br><span class="line">    &lt;title&gt;Title&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;div class=<span class="string">&quot;item&quot;</span> style=<span class="string">&quot;width: 50px;height: 50px;background-color: red&quot;</span>&gt;&lt;/div&gt;</span><br><span class="line">        &lt;div class=<span class="string">&quot;item&quot;</span> style=<span class="string">&quot;width: 50px;height: 50px;background-color: red&quot;</span>&gt;&lt;/div&gt;</span><br><span class="line">        &lt;div class=<span class="string">&quot;item&quot;</span> style=<span class="string">&quot;width: 50px;height: 50px;background-color: red&quot;</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        <span class="built_in">let</span> items=document.getElementsByClassName(<span class="string">&quot;item&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (var i=0;i&lt;items.length;i++)&#123;</span><br><span class="line">            items[i].onclick=<span class="function"><span class="title">function</span></span> ()&#123;</span><br><span class="line">                items[i].style.backgroundColor=<span class="string">&#x27;pink&#x27;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        console.log(windows.i)  //3 </span><br><span class="line">        // 当var=3的时候，点击事件开始向外层作用域找，找不到，就是windows.i，此时是3，如果是<span class="built_in">let</span> i，具有块级作用域，所以每一次触碰事件的i都是不同的。</span><br><span class="line"></span><br><span class="line">        //相当于这样</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">let</span> i = 0;</span><br><span class="line">                        items[i].onclick=<span class="function"><span class="title">function</span></span> ()&#123;</span><br><span class="line">                items[i].style.backgroundColor=<span class="string">&#x27;pink&#x27;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">                &#123;</span><br><span class="line">            <span class="built_in">let</span> i = 1;</span><br><span class="line">                        items[i].onclick=<span class="function"><span class="title">function</span></span> ()&#123;</span><br><span class="line">                items[i].style.backgroundColor=<span class="string">&#x27;pink&#x27;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">                &#123;</span><br><span class="line">            <span class="built_in">let</span> i = 2;</span><br><span class="line">                        items[i].onclick=<span class="function"><span class="title">function</span></span> ()&#123;</span><br><span class="line">                items[i].style.backgroundColor=<span class="string">&#x27;pink&#x27;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
+<h2 id="const命令"><a href="#const命令" class="headerlink" title="const命令"></a>const命令</h2><p>声明常量</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">const AA = <span class="string">&#x27;xiaohao&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>1.一定要赋初始值<br>2.一般常量使用大写（潜规则）<br>3.常量的值不能修改<br>4.也具有块级作用域</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    const pyaler = <span class="string">&#x27;uzi&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line">console.log(player) //error</span><br></pre></td></tr></table></figure>
+<p>5.对于数组和对象的元素修改，不算作对常量的修改</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">const team = [<span class="string">&#x27;uzi&#x27;</span>,<span class="string">&#x27;MXLG&#x27;</span>,<span class="string">&#x27;Ming&#x27;</span>,<span class="string">&#x27;Letme&#x27;</span>];</span><br><span class="line">team.push(<span class="string">&#x27;Meiko&#x27;</span>); //不报错，常量地址没有发生变化,值发生改变就会报错</span><br><span class="line"></span><br></pre></td></tr></table></figure>
     </div>
 </div>
 <style>
@@ -306,12 +321,19 @@
 </script>
 <div class="Last-Next">
     
+    <a href="/2021/05/16/ES6-%E5%8F%98%E9%87%8F%E7%9A%84%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC/">
+        <div class="last">
+            <span>上一篇</span>
+            <p>ES6-变量的解构赋值</p>
+        </div>
+    </a>
+    
 
     
-    <a href="/2022/04/02/My-New-Post/">
+    <a href="/2021/05/16/second/">
         <div class="next">
             <span>下一篇</span>
-            <p>My New Post</p>
+            <p>凛冬不至</p>
         </div>
     </a>
     

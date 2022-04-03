@@ -3,14 +3,21 @@
 
 	<head>
 		
-<title>Hello World-Quiet</title>
+<title>ES6-Symbol类型的认识-Quiet</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" type="image/x-icon" href="/image/img.ico">
 
-<meta name="keywords" content="hexo,小豪博客，博客，小豪">
-<meta name="description" content="描述">
+
+<meta name="keywords" content="ES6 Symbol类型的认识,">
+<meta name="description" content="<pre><code>    ES6引入了一种新的原始数据类型Symbol，表示独一无二的值，它是javascript语言的第七种数据类型，是一种类似于字符串的数据类型。
+    Symbol特点
+    1）Symbol值是唯一的，用来解决命名冲突的问题
+    2) Symbol值不能与其他数据进行运算
+    3) Symbol定义的对象属性不能使用for..in循坏遍历，但是可以使用Reflect.ownKeys来获取对象的所有键名
+</code></pre>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">//创建Symbol</span><br><span class="line">       <span class="built_in">let</span> s = Symbol();</span><br><span class="line">       console.log(s,typeof s);</span><br><span class="line"></span><br><span class="line">       //第一种方式</span><br><span class="line">       <span class="built_in">let</span> s2 = Symbol(<span class="string">&#x27;小豪&#x27;</span>);</span><br><span class="line">       <span class="built_in">let</span> s3 = Symbol(<span class="string">&#x27;小豪&#x27;</span>);</span><br><span class="line">       console.log(s2 == s3);//false</span><br><span class="line"></span><br><span class="line">       //第二种方式 对象</span><br><span class="line">       <span class="built_in">let</span> s4 = Symbol.<span class="keyword">for</span>(<span class="string">&#x27;小豪&#x27;</span>);</span><br><span class="line">       <span class="built_in">let</span> s5 = Symbol.<span class="keyword">for</span>(<span class="string">&#x27;小豪&#x27;</span>);</span><br><span class="line">       console.log(s4 == s5);//true</span><br><span class="line"></span><br><span class="line">       //不能与其他数据进行运算</span><br><span class="line">       <span class="built_in">let</span> result = s + 100;//报错</span><br><span class="line"></span><br><span class="line">       //js七种数据类型</span><br><span class="line">       // u  undefined</span><br><span class="line">       // s  Symbol String</span><br><span class="line">       // o  object</span><br><span class="line">       // n  null number</span><br><span class="line">       // b  boolean</span><br></pre></td></tr></table></figure>">
 
 
 <script src="/js/jquery.min.js"></script>
@@ -243,8 +250,12 @@
     <div class="bg-content">
         <ul class="tag">
             
+            
+            <li><a href="/tags/ES6 Symbol类型的认识">ES6 Symbol类型的认识</a></li>
+            
+            
         </ul>
-        <h1>Hello World</h1>
+        <h1>ES6-Symbol类型的认识</h1>
         <div class="article-info">
             <div class="article-author">
                 
@@ -256,28 +267,28 @@
                 </svg>
                 
                 <span> <a href="">Xiao Hao</a></span>
-                <p>2022-04-03 23:33:56</p>
+                <p>2021-06-03 14:42:43</p>
             </div>
         </div>
     </div>
 </div>
 <div class="article-content">
     <div id="article" class="content">
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<p>js中的DOM操作<br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/zxt-17862802783/p/7498790.html">https://www.cnblogs.com/zxt-17862802783/p/7498790.html</a></p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+        <pre><code>    ES6引入了一种新的原始数据类型Symbol，表示独一无二的值，它是javascript语言的第七种数据类型，是一种类似于字符串的数据类型。
+    Symbol特点
+    1）Symbol值是唯一的，用来解决命名冲突的问题
+    2) Symbol值不能与其他数据进行运算
+    3) Symbol定义的对象属性不能使用for..in循坏遍历，但是可以使用Reflect.ownKeys来获取对象的所有键名
+</code></pre>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">//创建Symbol</span><br><span class="line">       <span class="built_in">let</span> s = Symbol();</span><br><span class="line">       console.log(s,typeof s);</span><br><span class="line"></span><br><span class="line">       //第一种方式</span><br><span class="line">       <span class="built_in">let</span> s2 = Symbol(<span class="string">&#x27;小豪&#x27;</span>);</span><br><span class="line">       <span class="built_in">let</span> s3 = Symbol(<span class="string">&#x27;小豪&#x27;</span>);</span><br><span class="line">       console.log(s2 == s3);//false</span><br><span class="line"></span><br><span class="line">       //第二种方式 对象</span><br><span class="line">       <span class="built_in">let</span> s4 = Symbol.<span class="keyword">for</span>(<span class="string">&#x27;小豪&#x27;</span>);</span><br><span class="line">       <span class="built_in">let</span> s5 = Symbol.<span class="keyword">for</span>(<span class="string">&#x27;小豪&#x27;</span>);</span><br><span class="line">       console.log(s4 == s5);//true</span><br><span class="line"></span><br><span class="line">       //不能与其他数据进行运算</span><br><span class="line">       <span class="built_in">let</span> result = s + 100;//报错</span><br><span class="line"></span><br><span class="line">       //js七种数据类型</span><br><span class="line">       // u  undefined</span><br><span class="line">       // s  Symbol String</span><br><span class="line">       // o  object</span><br><span class="line">       // n  null number</span><br><span class="line">       // b  boolean</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<p>Symbol 值作为属性名时，该属性是公有属性不是私有属性，可以在类的外部访问。但是不会出现在 for…in 、 for…of 的循环中，也不会被 Object.keys() 、 Object.getOwnPropertyNames() 返回。如果要读取到一个对象的 Symbol 属性，可以通过 Object.getOwnPropertySymbols() 和 Reflect.ownKeys() 取到。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">let</span> sy = Symbol(<span class="string">&quot;key1&quot;</span>);</span><br><span class="line">        <span class="built_in">let</span> syObject = &#123;&#125;;</span><br><span class="line">syObject[sy] = <span class="string">&quot;kk&quot;</span>;</span><br><span class="line">console.log(syObject);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="built_in">let</span> i <span class="keyword">in</span> syObject) &#123;</span><br><span class="line">  console.log(i);</span><br><span class="line">&#125;    // 无输出</span><br><span class="line"></span><br><span class="line">Object.keys(syObject);                     // []</span><br><span class="line">Object.getOwnPropertySymbols(syObject);    // [Symbol(key1)]</span><br><span class="line">Reflect.ownKeys(syObject);                 // [Symbol(key1)]</span><br></pre></td></tr></table></figure>
+<p>Symbol.for()<br>Symbol.for() 类似单例模式，首先会在全局搜索被登记的 Symbol 中是否有该字符串参数作为名称的 Symbol 值，如果有即返回该 Symbol 值，若没有则新建并返回一个以该字符串参数为名称的 Symbol 值，并登记在全局环境中供搜索。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">let</span> yellow = Symbol(<span class="string">&quot;Yellow&quot;</span>);</span><br><span class="line"><span class="built_in">let</span> yellow1 = Symbol.<span class="keyword">for</span>(<span class="string">&quot;Yellow&quot;</span>);</span><br><span class="line">yellow === yellow1;      // <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">let</span> yellow2 = Symbol.<span class="keyword">for</span>(<span class="string">&quot;Yellow&quot;</span>);</span><br><span class="line">yellow1 === yellow2;     // <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
+<p>Symbol.keyFor() 返回一个已登记的 Symbol 类型值的 key ，用来检测该字符串参数作为名称的 Symbol 值是否已被登记。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">let</span> yellow1 = Symbol.<span class="keyword">for</span>(<span class="string">&quot;Yellow&quot;</span>);</span><br><span class="line">Symbol.keyFor(yellow1);    // <span class="string">&quot;Yellow&quot;</span></span><br></pre></td></tr></table></figure>
     </div>
 </div>
 <style>
@@ -306,12 +317,19 @@
 </script>
 <div class="Last-Next">
     
+    <a href="/2021/06/05/ES6-Symbol%E7%9A%84%E5%BA%94%E7%94%A8/">
+        <div class="last">
+            <span>上一篇</span>
+            <p>ES6-Symbol的应用</p>
+        </div>
+    </a>
+    
 
     
-    <a href="/2022/04/02/My-New-Post/">
+    <a href="/2021/06/03/ES6-%E6%89%A9%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6/">
         <div class="next">
             <span>下一篇</span>
-            <p>My New Post</p>
+            <p>ES6-扩展运算符</p>
         </div>
     </a>
     
