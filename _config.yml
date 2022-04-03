@@ -102,4 +102,6 @@ theme: quiet
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: git
+  repo: https://github.com/xiaohao-1314/xiaohao-1314.github.io
+  branch: master
