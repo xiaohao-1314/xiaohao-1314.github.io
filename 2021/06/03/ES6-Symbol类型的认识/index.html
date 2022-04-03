@@ -10,14 +10,8 @@
 <link rel="shortcut icon" type="image/x-icon" href="/image/img.ico">
 
 
-<meta name="keywords" content="ES6 Symbol类型的认识,">
-<meta name="description" content="<pre><code>    ES6引入了一种新的原始数据类型Symbol，表示独一无二的值，它是javascript语言的第七种数据类型，是一种类似于字符串的数据类型。
-    Symbol特点
-    1）Symbol值是唯一的，用来解决命名冲突的问题
-    2) Symbol值不能与其他数据进行运算
-    3) Symbol定义的对象属性不能使用for..in循坏遍历，但是可以使用Reflect.ownKeys来获取对象的所有键名
-</code></pre>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">//创建Symbol</span><br><span class="line">       <span class="built_in">let</span> s = Symbol();</span><br><span class="line">       console.log(s,typeof s);</span><br><span class="line"></span><br><span class="line">       //第一种方式</span><br><span class="line">       <span class="built_in">let</span> s2 = Symbol(<span class="string">&#x27;小豪&#x27;</span>);</span><br><span class="line">       <span class="built_in">let</span> s3 = Symbol(<span class="string">&#x27;小豪&#x27;</span>);</span><br><span class="line">       console.log(s2 == s3);//false</span><br><span class="line"></span><br><span class="line">       //第二种方式 对象</span><br><span class="line">       <span class="built_in">let</span> s4 = Symbol.<span class="keyword">for</span>(<span class="string">&#x27;小豪&#x27;</span>);</span><br><span class="line">       <span class="built_in">let</span> s5 = Symbol.<span class="keyword">for</span>(<span class="string">&#x27;小豪&#x27;</span>);</span><br><span class="line">       console.log(s4 == s5);//true</span><br><span class="line"></span><br><span class="line">       //不能与其他数据进行运算</span><br><span class="line">       <span class="built_in">let</span> result = s + 100;//报错</span><br><span class="line"></span><br><span class="line">       //js七种数据类型</span><br><span class="line">       // u  undefined</span><br><span class="line">       // s  Symbol String</span><br><span class="line">       // o  object</span><br><span class="line">       // n  null number</span><br><span class="line">       // b  boolean</span><br></pre></td></tr></table></figure>">
+<meta name="keywords" content="ES6,Symbol,">
+<meta name="description" content="">
 
 
 <script src="/js/jquery.min.js"></script>
@@ -251,7 +245,9 @@
         <ul class="tag">
             
             
-            <li><a href="/tags/ES6 Symbol类型的认识">ES6 Symbol类型的认识</a></li>
+            <li><a href="/tags/ES6">ES6</a></li>
+            
+            <li><a href="/tags/Symbol">Symbol</a></li>
             
             
         </ul>
@@ -274,16 +270,10 @@
 </div>
 <div class="article-content">
     <div id="article" class="content">
-        <pre><code>    ES6引入了一种新的原始数据类型Symbol，表示独一无二的值，它是javascript语言的第七种数据类型，是一种类似于字符串的数据类型。
-    Symbol特点
-    1）Symbol值是唯一的，用来解决命名冲突的问题
-    2) Symbol值不能与其他数据进行运算
-    3) Symbol定义的对象属性不能使用for..in循坏遍历，但是可以使用Reflect.ownKeys来获取对象的所有键名
-</code></pre>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">//创建Symbol</span><br><span class="line">       <span class="built_in">let</span> s = Symbol();</span><br><span class="line">       console.log(s,typeof s);</span><br><span class="line"></span><br><span class="line">       //第一种方式</span><br><span class="line">       <span class="built_in">let</span> s2 = Symbol(<span class="string">&#x27;小豪&#x27;</span>);</span><br><span class="line">       <span class="built_in">let</span> s3 = Symbol(<span class="string">&#x27;小豪&#x27;</span>);</span><br><span class="line">       console.log(s2 == s3);//false</span><br><span class="line"></span><br><span class="line">       //第二种方式 对象</span><br><span class="line">       <span class="built_in">let</span> s4 = Symbol.<span class="keyword">for</span>(<span class="string">&#x27;小豪&#x27;</span>);</span><br><span class="line">       <span class="built_in">let</span> s5 = Symbol.<span class="keyword">for</span>(<span class="string">&#x27;小豪&#x27;</span>);</span><br><span class="line">       console.log(s4 == s5);//true</span><br><span class="line"></span><br><span class="line">       //不能与其他数据进行运算</span><br><span class="line">       <span class="built_in">let</span> result = s + 100;//报错</span><br><span class="line"></span><br><span class="line">       //js七种数据类型</span><br><span class="line">       // u  undefined</span><br><span class="line">       // s  Symbol String</span><br><span class="line">       // o  object</span><br><span class="line">       // n  null number</span><br><span class="line">       // b  boolean</span><br></pre></td></tr></table></figure>
-<span id="more"></span>
+        <h3 id="什么是Symbol"><a href="#什么是Symbol" class="headerlink" title="什么是Symbol"></a>什么是Symbol</h3><p>ES6引入了一种新的原始数据类型Symbol，表示独一无二的值，它是javascript语言的第七种数据类型，是一种类似于字符串的数据类型。<br>Symbol特点<br>1）Symbol值是唯一的，用来解决命名冲突的问题<br>2) Symbol值不能与其他数据进行运算<br>3) Symbol定义的对象属性不能使用for..in循坏遍历，但是可以使用Reflect.ownKeys来获取对象的所有键名</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//创建Symbol</span></span><br><span class="line">       <span class="keyword">let</span> s = <span class="title class_">Symbol</span>();</span><br><span class="line">       <span class="variable language_">console</span>.<span class="title function_">log</span>(s,<span class="keyword">typeof</span> s);</span><br><span class="line"></span><br><span class="line">       <span class="comment">//第一种方式</span></span><br><span class="line">       <span class="keyword">let</span> s2 = <span class="title class_">Symbol</span>(<span class="string">&#x27;小豪&#x27;</span>);</span><br><span class="line">       <span class="keyword">let</span> s3 = <span class="title class_">Symbol</span>(<span class="string">&#x27;小豪&#x27;</span>);</span><br><span class="line">       <span class="variable language_">console</span>.<span class="title function_">log</span>(s2 == s3);<span class="comment">//false</span></span><br><span class="line"></span><br><span class="line">       <span class="comment">//第二种方式 对象</span></span><br><span class="line">       <span class="keyword">let</span> s4 = <span class="title class_">Symbol</span>.<span class="title function_">for</span>(<span class="string">&#x27;小豪&#x27;</span>);</span><br><span class="line">       <span class="keyword">let</span> s5 = <span class="title class_">Symbol</span>.<span class="title function_">for</span>(<span class="string">&#x27;小豪&#x27;</span>);</span><br><span class="line">       <span class="variable language_">console</span>.<span class="title function_">log</span>(s4 == s5);<span class="comment">//true</span></span><br><span class="line"></span><br><span class="line">       <span class="comment">//不能与其他数据进行运算</span></span><br><span class="line">       <span class="keyword">let</span> result = s + <span class="number">100</span>;<span class="comment">//报错</span></span><br><span class="line"></span><br><span class="line">       <span class="comment">//js七种数据类型</span></span><br><span class="line">       <span class="comment">// u  undefined</span></span><br><span class="line">       <span class="comment">// s  Symbol String</span></span><br><span class="line">       <span class="comment">// o  object</span></span><br><span class="line">       <span class="comment">// n  null number</span></span><br><span class="line">       <span class="comment">// b  boolean</span></span><br></pre></td></tr></table></figure>
 <p>Symbol 值作为属性名时，该属性是公有属性不是私有属性，可以在类的外部访问。但是不会出现在 for…in 、 for…of 的循环中，也不会被 Object.keys() 、 Object.getOwnPropertyNames() 返回。如果要读取到一个对象的 Symbol 属性，可以通过 Object.getOwnPropertySymbols() 和 Reflect.ownKeys() 取到。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">let</span> sy = Symbol(<span class="string">&quot;key1&quot;</span>);</span><br><span class="line">        <span class="built_in">let</span> syObject = &#123;&#125;;</span><br><span class="line">syObject[sy] = <span class="string">&quot;kk&quot;</span>;</span><br><span class="line">console.log(syObject);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="built_in">let</span> i <span class="keyword">in</span> syObject) &#123;</span><br><span class="line">  console.log(i);</span><br><span class="line">&#125;    // 无输出</span><br><span class="line"></span><br><span class="line">Object.keys(syObject);                     // []</span><br><span class="line">Object.getOwnPropertySymbols(syObject);    // [Symbol(key1)]</span><br><span class="line">Reflect.ownKeys(syObject);                 // [Symbol(key1)]</span><br></pre></td></tr></table></figure>
+<figure class="highlight reasonml"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> sy = <span class="constructor">Symbol(<span class="string">&quot;key1&quot;</span>)</span>;</span><br><span class="line">        <span class="keyword">let</span> syObject = &#123;&#125;;</span><br><span class="line">syObject<span class="literal">[<span class="identifier">sy</span>]</span> = <span class="string">&quot;kk&quot;</span>;</span><br><span class="line">console.log(syObject);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">in</span> syObject) &#123;</span><br><span class="line">  console.log(i);</span><br><span class="line">&#125;    <span class="comment">// 无输出</span></span><br><span class="line"></span><br><span class="line"><span class="module-access"><span class="module"><span class="identifier">Object</span>.</span></span>keys(syObject);                     <span class="comment">// []</span></span><br><span class="line"><span class="module-access"><span class="module"><span class="identifier">Object</span>.</span></span>get<span class="constructor">OwnPropertySymbols(<span class="params">syObject</span>)</span>;    <span class="comment">// [Symbol(key1)]</span></span><br><span class="line"><span class="module-access"><span class="module"><span class="identifier">Reflect</span>.</span></span>own<span class="constructor">Keys(<span class="params">syObject</span>)</span>;                 <span class="comment">// [Symbol(key1)]</span></span><br></pre></td></tr></table></figure>
 <p>Symbol.for()<br>Symbol.for() 类似单例模式，首先会在全局搜索被登记的 Symbol 中是否有该字符串参数作为名称的 Symbol 值，如果有即返回该 Symbol 值，若没有则新建并返回一个以该字符串参数为名称的 Symbol 值，并登记在全局环境中供搜索。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">let</span> yellow = Symbol(<span class="string">&quot;Yellow&quot;</span>);</span><br><span class="line"><span class="built_in">let</span> yellow1 = Symbol.<span class="keyword">for</span>(<span class="string">&quot;Yellow&quot;</span>);</span><br><span class="line">yellow === yellow1;      // <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">let</span> yellow2 = Symbol.<span class="keyword">for</span>(<span class="string">&quot;Yellow&quot;</span>);</span><br><span class="line">yellow1 === yellow2;     // <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 
@@ -317,10 +307,10 @@
 </script>
 <div class="Last-Next">
     
-    <a href="/2021/06/05/ES6-Symbol%E7%9A%84%E5%BA%94%E7%94%A8/">
+    <a href="/2021/06/03/ES6-Symbol%E7%9A%84%E5%BA%94%E7%94%A8/">
         <div class="last">
             <span>上一篇</span>
-            <p>ES6-Symbol的应用</p>
+            <p>ES6-Symbol类型的认识</p>
         </div>
     </a>
     
