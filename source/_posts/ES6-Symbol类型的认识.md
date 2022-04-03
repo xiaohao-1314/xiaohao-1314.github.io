@@ -1,15 +1,18 @@
 ---
 title: ES6-Symbol类型的认识
+categories: ES6
 date: 2021-06-03 14:42:43
-tags: ES6 Symbol类型的认识
+tags: 
+    - ES6 
+    - Symbol
 ---
-        ES6引入了一种新的原始数据类型Symbol，表示独一无二的值，它是javascript语言的第七种数据类型，是一种类似于字符串的数据类型。
-        Symbol特点
-        1）Symbol值是唯一的，用来解决命名冲突的问题
-        2) Symbol值不能与其他数据进行运算
-        3) Symbol定义的对象属性不能使用for..in循坏遍历，但是可以使用Reflect.ownKeys来获取对象的所有键名
-
-```bash
+### 什么是Symbol
+ES6引入了一种新的原始数据类型Symbol，表示独一无二的值，它是javascript语言的第七种数据类型，是一种类似于字符串的数据类型。  
+Symbol特点
+1）Symbol值是唯一的，用来解决命名冲突的问题  
+2) Symbol值不能与其他数据进行运算  
+3) Symbol定义的对象属性不能使用for..in循坏遍历，但是可以使用Reflect.ownKeys来获取对象的所有键名
+```
  //创建Symbol
         let s = Symbol();
         console.log(s,typeof s);
@@ -34,9 +37,8 @@ tags: ES6 Symbol类型的认识
         // n  null number
         // b  boolean
 ```
-<!-- more -->
 Symbol 值作为属性名时，该属性是公有属性不是私有属性，可以在类的外部访问。但是不会出现在 for...in 、 for...of 的循环中，也不会被 Object.keys() 、 Object.getOwnPropertyNames() 返回。如果要读取到一个对象的 Symbol 属性，可以通过 Object.getOwnPropertySymbols() 和 Reflect.ownKeys() 取到。
-```bash
+```
         let sy = Symbol("key1");
                 let syObject = {};
         syObject[sy] = "kk";
