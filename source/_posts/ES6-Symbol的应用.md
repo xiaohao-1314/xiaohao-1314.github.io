@@ -1,5 +1,5 @@
 ---
-title: ES6-Symbol类型的认识
+title: ES6-Symbol的应用
 categories: ES6
 date: 2021-06-03 14:42:43
 tags: 
@@ -7,9 +7,8 @@ tags:
     - Symbol
 ---
 除了定义自己使用的Symbol值以外，ES6还提供了11个内置的Symbol值，指向语言内部使用的方法
-![alt](./ES6-Symbol%E7%9A%84%E5%BA%94%E7%94%A8/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20210605110724.png)
-<!-- more -->
-![alt](./ES6-Symbol%E7%9A%84%E5%BA%94%E7%94%A8/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20210605110750.png)
+![./ES6-Symbol%E7%9A%84%E5%BA%94%E7%94%A8](%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20210605110724.png)
+![./ES6-Symbol%E7%9A%84%E5%BA%94%E7%94%A8](%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20210605110750.png)
 
 ```bash
 class Person {
