@@ -65,6 +65,7 @@
 }
 
 #article pre code {
+    white-space: pre-wrap;
     padding: 20px;
 }
 
