@@ -7,9 +7,9 @@ tags:
     - Symbol
 ---
 除了定义自己使用的Symbol值以外，ES6还提供了11个内置的Symbol值，指向语言内部使用的方法
-![alt](../../themes//quiet/source/image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20210605110724.png)
+![alt](./ES6-Symbol%E7%9A%84%E5%BA%94%E7%94%A8/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20210605110724.png)
 <!-- more -->
-![alt](../../themes//quiet/source/image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20210605110750.png)
+![alt](./ES6-Symbol%E7%9A%84%E5%BA%94%E7%94%A8/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20210605110750.png)
 
 ```bash
 class Person {
