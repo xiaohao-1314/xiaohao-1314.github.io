@@ -7,6 +7,9 @@
     4.hexo server
 ps:记得先安装hexo-deployer-git  
      npm install --save hexo-deployer-git
+
+目录下的index.py的作用是将之前写在一起的md文件分类在不同文件夹  
+   执行python index.py
 ### 可能遇到的问题
 #### github超时
      $ git config --global http.proxy http://127.0.0.1:1080  
