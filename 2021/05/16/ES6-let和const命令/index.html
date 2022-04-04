@@ -10,14 +10,8 @@
 <link rel="shortcut icon" type="image/x-icon" href="/image/img.ico">
 
 
-<meta name="keywords" content="ES6 let和const命令,">
-<meta name="description" content="<h2 id="let命令"><a href="#let命令" class="headerlink" title="let命令"></a>let命令</h2><p>1.变量不能重复声明</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">let</span> star=<span class="string">&#x27;罗志祥&#x27;</span>;</span><br><span class="line"><span class="built_in">let</span> star=<span class="string">&#x27;小猪&#x27;</span>  //error</span><br></pre></td></tr></table></figure>
-<p>2.let有块级作用域，全局，函数，eval</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="built_in">let</span> girl=<span class="string">&#x27;周扬青&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line">console.log(girl) //error</span><br></pre></td></tr></table></figure>
-<p>不仅仅针对花括号，例如if（）里面</p>
-<p>3.不存在变量提前</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">console.log(song)   //error</span><br><span class="line"><span class="built_in">let</span> song=<span class="string">&#x27;时间管理大师&#x27;</span></span><br></pre></td></tr></table></figure>">
+<meta name="keywords" content="ES6,let和const命令,">
+<meta name="description" content="">
 
 
 <script src="/js/jquery.min.js"></script>
@@ -251,7 +245,9 @@
         <ul class="tag">
             
             
-            <li><a href="/tags/ES6 let和const命令">ES6 let和const命令</a></li>
+            <li><a href="/tags/ES6">ES6</a></li>
+            
+            <li><a href="/tags/let和const命令">let和const命令</a></li>
             
             
         </ul>
@@ -281,7 +277,6 @@
 <p>不仅仅针对花括号，例如if（）里面</p>
 <p>3.不存在变量提前</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">console.log(song)   //error</span><br><span class="line"><span class="built_in">let</span> song=<span class="string">&#x27;时间管理大师&#x27;</span></span><br></pre></td></tr></table></figure>
-<span id="more"></span>
 <p>4.不影响作用域链</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">let</span> school=<span class="string">&#x27;abc&#x27;</span></span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">fn</span></span>()&#123;</span><br><span class="line">    console.log(school) //abc</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>案例</p>

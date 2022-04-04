@@ -10,8 +10,8 @@
 <link rel="shortcut icon" type="image/x-icon" href="/image/img.ico">
 
 
-<meta name="keywords" content="ES6 迭代器,">
-<meta name="description" content="<p><img src="one.png" alt="alt"></p>">
+<meta name="keywords" content="ES6,迭代器,">
+<meta name="description" content="">
 
 
 <script src="/js/jquery.min.js"></script>
@@ -245,7 +245,9 @@
         <ul class="tag">
             
             
-            <li><a href="/tags/ES6 迭代器">ES6 迭代器</a></li>
+            <li><a href="/tags/ES6">ES6</a></li>
+            
+            <li><a href="/tags/迭代器">迭代器</a></li>
             
             
         </ul>
@@ -268,9 +270,7 @@
 </div>
 <div class="article-content">
     <div id="article" class="content">
-        <p><img src="one.png" alt="alt"></p>
-<span id="more"></span>
-<p><img src="two.png" alt="alt"></p>
+        <h3 id="什么是迭代器"><a href="#什么是迭代器" class="headerlink" title="什么是迭代器"></a>什么是迭代器</h3><p>1.介绍：迭代器(lterator)是一种接口，为各种不同的数据结构提供统一的访问机制。任何数据结构只要部署lterator接口，就可以完成遍历操作。<br>2.原理：创建一个指针对象，指向数据结构的起始位置，第一次调用==next（）==方法，指针自动指向数据结构第一个成员，接下来不断调用next（），指针一直往后移动，直到指向最后一个成员，没调用next（）返回一个包含value和done属性的对象。  </p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">   &lt;script&gt;</span><br><span class="line">        //声明一个数组</span><br><span class="line">        const xiyou = [<span class="string">&#x27;唐僧&#x27;</span>,<span class="string">&#x27;孙悟空&#x27;</span>,<span class="string">&#x27;猪八戒&#x27;</span>,<span class="string">&#x27;沙僧&#x27;</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="built_in">let</span> v <span class="keyword">in</span> xiyou)&#123; //保存键名</span><br><span class="line">            console.log(v);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="built_in">let</span> v of xiyou)&#123; //保存键值</span><br><span class="line">            console.log(v);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">let</span> iterator = xiyou[Symbol.iterator]();</span><br><span class="line">        //调用对象的next方法，每次返回value的值，和<span class="keyword">done</span>的状态</span><br><span class="line">        console.log(iterator.next());//&#123;value: <span class="string">&quot;唐僧&quot;</span>, <span class="keyword">done</span>: <span class="literal">false</span>&#125;</span><br><span class="line">        console.log(iterator.next());//&#123;value: <span class="string">&quot;孙悟空&quot;</span>, <span class="keyword">done</span>: <span class="literal">false</span>&#125;</span><br><span class="line">        console.log(iterator.next());//&#123;value: <span class="string">&quot;猪八戒&quot;</span>, <span class="keyword">done</span>: <span class="literal">false</span>&#125;</span><br><span class="line">        console.log(iterator.next());//&#123;value: <span class="string">&quot;沙僧&quot;</span>, <span class="keyword">done</span>: <span class="literal">false</span>&#125;</span><br><span class="line">        console.log(iterator.next());//&#123;value: undefined, <span class="keyword">done</span>: <span class="literal">true</span>&#125;</span><br><span class="line"></span><br><span class="line">        //应用</span><br><span class="line">        const banji = &#123;</span><br><span class="line">    name : <span class="string">&quot;终极一班&quot;</span>,</span><br><span class="line">    stus: [</span><br><span class="line">        <span class="string">&#x27;aa&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;bb&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;cc&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;dd&#x27;</span></span><br><span class="line">    ],</span><br><span class="line">    [Symbol.iterator]()&#123;</span><br><span class="line">        <span class="built_in">let</span> index = 0;</span><br><span class="line">        <span class="built_in">let</span> _this = this;</span><br><span class="line">        <span class="built_in">return</span> &#123;</span><br><span class="line">            next: () =&gt; &#123;</span><br><span class="line">                <span class="keyword">if</span>(index &lt; this.stus.length)&#123;</span><br><span class="line">                    const result = &#123;value: _this.stus[index],<span class="keyword">done</span>: <span class="literal">false</span>&#125;;</span><br><span class="line">                    //下标自增</span><br><span class="line">                    index++;</span><br><span class="line">                    //返回结果</span><br><span class="line">                    <span class="built_in">return</span> result;</span><br><span class="line">                &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="built_in">return</span> &#123;value: underfined,<span class="keyword">done</span>:<span class="literal">true</span>&#125;;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span>(<span class="built_in">let</span> v of banji)&#123;</span><br><span class="line">    console.log(v);  // aa bb cc <span class="built_in">dd</span></span><br><span class="line">&#125;</span><br><span class="line">        </span><br><span class="line">    &lt;/script&gt;</span><br></pre></td></tr></table></figure>
     </div>
 </div>

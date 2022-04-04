@@ -10,10 +10,8 @@
 <link rel="shortcut icon" type="image/x-icon" href="/image/img.ico">
 
 
-<meta name="keywords" content="ES6 箭头函数,">
-<meta name="description" content="<p>ES6允许使用箭头（=&gt;）定义函数,俗称箭头函数</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">//普通写法</span><br><span class="line"><span class="built_in">let</span> fn = <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">    <span class="built_in">return</span> a + b;</span><br><span class="line">&#125;</span><br><span class="line">//箭头函数写法</span><br><span class="line"> <span class="built_in">let</span> fn = (a,b) =&gt; &#123;</span><br><span class="line">     <span class="built_in">return</span> a + b;</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="built_in">let</span> result = fn(1,2);</span><br><span class="line"> console.log(result);</span><br></pre></td></tr></table></figure>
-<h3 id="1-this是静态的，this始终指向函数声明所在作用域下的this的值"><a href="#1-this是静态的，this始终指向函数声明所在作用域下的this的值" class="headerlink" title="1.this是静态的，this始终指向函数声明所在作用域下的this的值"></a>1.this是静态的，this始终指向函数声明所在作用域下的this的值</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">getName</span></span>() &#123;</span><br><span class="line">    console.log(this.name);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">let</span> getName2 = () =&gt;&#123;</span><br><span class="line">      console.log(this.name);</span><br><span class="line">  &#125;</span><br><span class="line">  //设置window对象的name属性</span><br><span class="line">  window.name = <span class="string">&#x27;xiaohao&#x27;</span>;</span><br><span class="line">  const shcool = &#123;</span><br><span class="line">      name:<span class="string">&#x27;小豪&#x27;</span></span><br><span class="line">  &#125;</span><br><span class="line">  //直接调用</span><br><span class="line">  getName();//xiaohao</span><br><span class="line">  getName2();//xiaohao</span><br><span class="line"></span><br><span class="line">  //call方法调用</span><br><span class="line">  getName.call(shcool);//小豪</span><br><span class="line">  getName2.call(shcool);//xiaohao</span><br></pre></td></tr></table></figure>">
+<meta name="keywords" content="ES6,箭头函数,">
+<meta name="description" content="">
 
 
 <script src="/js/jquery.min.js"></script>
@@ -247,7 +245,9 @@
         <ul class="tag">
             
             
-            <li><a href="/tags/ES6 箭头函数">ES6 箭头函数</a></li>
+            <li><a href="/tags/ES6">ES6</a></li>
+            
+            <li><a href="/tags/箭头函数">箭头函数</a></li>
             
             
         </ul>
@@ -270,10 +270,9 @@
 </div>
 <div class="article-content">
     <div id="article" class="content">
-        <p>ES6允许使用箭头（=&gt;）定义函数,俗称箭头函数</p>
+        <h3 id="什么是箭头函数"><a href="#什么是箭头函数" class="headerlink" title="什么是箭头函数"></a>什么是箭头函数</h3><p>ES6允许使用箭头（=&gt;）定义函数,俗称箭头函数  </p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">//普通写法</span><br><span class="line"><span class="built_in">let</span> fn = <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">    <span class="built_in">return</span> a + b;</span><br><span class="line">&#125;</span><br><span class="line">//箭头函数写法</span><br><span class="line"> <span class="built_in">let</span> fn = (a,b) =&gt; &#123;</span><br><span class="line">     <span class="built_in">return</span> a + b;</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="built_in">let</span> result = fn(1,2);</span><br><span class="line"> console.log(result);</span><br></pre></td></tr></table></figure>
 <h3 id="1-this是静态的，this始终指向函数声明所在作用域下的this的值"><a href="#1-this是静态的，this始终指向函数声明所在作用域下的this的值" class="headerlink" title="1.this是静态的，this始终指向函数声明所在作用域下的this的值"></a>1.this是静态的，this始终指向函数声明所在作用域下的this的值</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">getName</span></span>() &#123;</span><br><span class="line">    console.log(this.name);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">let</span> getName2 = () =&gt;&#123;</span><br><span class="line">      console.log(this.name);</span><br><span class="line">  &#125;</span><br><span class="line">  //设置window对象的name属性</span><br><span class="line">  window.name = <span class="string">&#x27;xiaohao&#x27;</span>;</span><br><span class="line">  const shcool = &#123;</span><br><span class="line">      name:<span class="string">&#x27;小豪&#x27;</span></span><br><span class="line">  &#125;</span><br><span class="line">  //直接调用</span><br><span class="line">  getName();//xiaohao</span><br><span class="line">  getName2();//xiaohao</span><br><span class="line"></span><br><span class="line">  //call方法调用</span><br><span class="line">  getName.call(shcool);//小豪</span><br><span class="line">  getName2.call(shcool);//xiaohao</span><br></pre></td></tr></table></figure>
-<span id="more"></span>
 <h3 id="2-不能作为构造函数"><a href="#2-不能作为构造函数" class="headerlink" title="2.不能作为构造函数"></a>2.不能作为构造函数</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">let</span> Person = (name,age) =&gt; &#123;</span><br><span class="line">    this.name = name;</span><br><span class="line">    this.age = age;</span><br><span class="line"> &#125;</span><br><span class="line"><span class="built_in">let</span> me = new Person(<span class="string">&#x27;xiaohao&#x27;</span>,30);</span><br><span class="line">console.log(me);//报错</span><br></pre></td></tr></table></figure>
 
 <h3 id="3-不能使用arguments变量"><a href="#3-不能使用arguments变量" class="headerlink" title="3.不能使用arguments变量"></a>3.不能使用arguments变量</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">let</span> fn = () =&gt; &#123;console.log(arguments);&#125;</span><br><span class="line">fn(1,2,3);</span><br></pre></td></tr></table></figure>
