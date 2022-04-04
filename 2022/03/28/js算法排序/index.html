@@ -139,7 +139,7 @@
     </ul>
     <div class="my_foot">
         
-        <a target="_blank" rel="noopener" href="https://xiaohao-1314.github.io/">
+        <a target="_blank" rel="noopener" href="https://gitee.com/liershuang/hexo-theme-quiet-ext&#39;">
             <img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
         </a>
         
@@ -268,7 +268,7 @@
 </div>
 <div class="article-content">
     <div id="article" class="content">
-        <p>js算法排序可视化网站：链接: <a target="_blank" rel="noopener" href="https://www.csdn.net/">https://visualgo.net/en</a></p>
+        <p>js算法排序可视化网站：链接: <a target="_blank" rel="noopener" href="https://www.csdn.net/">https://visualgo.net</a></p>
 <h1 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h1><figure class="highlight asciidoc"><table><tr><td class="code"><pre><span class="line">function BubbleSort(array) &#123;</span><br><span class="line"><span class="code">  var length = array.length;</span></span><br><span class="line"><span class="code">  for (var i = length - 1; i &gt; 0; i--) &#123; //用于缩小范围</span></span><br><span class="line"><span class="code">    for (var j = 0; j &lt; i; j++) &#123; //在范围内进行冒泡，在此范围内最大的一个将冒到最后面</span></span><br><span class="line"><span class="code">      if (array[j] &gt; array[j+1]) &#123; </span></span><br><span class="line"><span class="code">        var temp = array[j];</span></span><br><span class="line"><span class="code">        array[j] = array[j+1];</span></span><br><span class="line"><span class="code">        array[j+1] = temp;</span></span><br><span class="line"><span class="code">      &#125;</span></span><br><span class="line"><span class="code">    &#125;</span></span><br><span class="line"><span class="code">    console.log(array);</span></span><br><span class="line"><span class="code">    console.log(&quot;-----------------------------&quot;);</span></span><br><span class="line"><span class="code">  &#125;</span></span><br><span class="line"><span class="code">  return array;</span></span><br><span class="line">&#125;</span><br><span class="line">var arr = [10,9,8,7,7,6,5,11,3];</span><br><span class="line">var result = BubbleSort(arr);</span><br><span class="line">console.log(result); </span><br><span class="line">/*</span><br><span class="line"><span class="meta">[ 9, 8, 7, 7, 6, 5, 10, 3, 11 ]</span></span><br><span class="line"><span class="code">-----------------------------</span></span><br><span class="line"><span class="code">[ 8, 7, 7, 6, 5, 9, 3, 10, 11 ]</span></span><br><span class="line"><span class="code">-----------------------------</span></span><br><span class="line"><span class="meta">[ 7, 7, 6, 5, 8, 3, 9, 10, 11 ]</span></span><br><span class="line"><span class="code">-----------------------------</span></span><br><span class="line"><span class="code">[ 7, 6, 5, 7, 3, 8, 9, 10, 11 ]</span></span><br><span class="line"><span class="code">-----------------------------</span></span><br><span class="line"><span class="meta">[ 6, 5, 7, 3, 7, 8, 9, 10, 11 ]</span></span><br><span class="line"><span class="code">-----------------------------</span></span><br><span class="line"><span class="code">[ 5, 6, 3, 7, 7, 8, 9, 10, 11 ]</span></span><br><span class="line"><span class="code">-----------------------------</span></span><br><span class="line"><span class="meta">[ 5, 3, 6, 7, 7, 8, 9, 10, 11 ]</span></span><br><span class="line"><span class="code">-----------------------------</span></span><br><span class="line"><span class="code">[ 3, 5, 6, 7, 7, 8, 9, 10, 11 ]</span></span><br><span class="line"><span class="code">-----------------------------</span></span><br><span class="line"><span class="meta">[ 3, 5, 6, 7, 7, 8, 9, 10, 11 ]</span></span><br><span class="line">*/</span><br></pre></td></tr></table></figure>
 
 <h1 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h1><figure class="highlight asciidoc"><table><tr><td class="code"><pre><span class="line">function SelectionSort(array) &#123;</span><br><span class="line"><span class="code">  var length = array.length;</span></span><br><span class="line"><span class="code">  for (var i = 0; i &lt; length; i++) &#123; //缩小选择的范围</span></span><br><span class="line"><span class="code">    var min = array[i]; //假定范围内第一个为最小值</span></span><br><span class="line"><span class="code">    var index = i; //记录最小值的下标</span></span><br><span class="line"><span class="code">    for (var j = i + 1; j &lt; length; j++) &#123; //在范围内选取最小值</span></span><br><span class="line"><span class="code">      if (array[j] &lt; min) &#123;</span></span><br><span class="line"><span class="code">        min = array[j];</span></span><br><span class="line"><span class="code">        index = j;</span></span><br><span class="line"><span class="code">      &#125;</span></span><br><span class="line"><span class="code">    &#125;</span></span><br><span class="line"><span class="code">    if (index != i) &#123; //把范围内最小值交换到范围内第一个</span></span><br><span class="line"><span class="code">      var temp = array[i];</span></span><br><span class="line"><span class="code">      array[i] = array[index];</span></span><br><span class="line"><span class="code">      array[index] = temp;</span></span><br><span class="line"><span class="code">    &#125;</span></span><br><span class="line"><span class="code">    console.log(array);</span></span><br><span class="line"><span class="code">    console.log(&quot;---------------------&quot;);</span></span><br><span class="line"><span class="code">  &#125;</span></span><br><span class="line"><span class="code">  return array;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var arr = [ 1, 10, 100, 90, 65, 5, 4, 10, 2, 4 ];</span><br><span class="line">var result = SelectionSort(arr);</span><br><span class="line">console.log(result);</span><br><span class="line">/*</span><br><span class="line"><span class="meta">[ 1, 10, 100, 90, 65, 5, 4, 10, 2, 4 ]</span></span><br><span class="line"><span class="code">---------------------</span></span><br><span class="line"><span class="code">[ 1, 2, 100, 90, 65, 5, 4, 10, 10, 4 ]</span></span><br><span class="line"><span class="code">---------------------</span></span><br><span class="line"><span class="meta">[ 1, 2, 4, 90, 65, 5, 100, 10, 10, 4 ]</span></span><br><span class="line"><span class="code">---------------------</span></span><br><span class="line"><span class="code">[ 1, 2, 4, 4, 65, 5, 100, 10, 10, 90 ]</span></span><br><span class="line"><span class="code">---------------------</span></span><br><span class="line"><span class="meta">[ 1, 2, 4, 4, 5, 65, 100, 10, 10, 90 ]</span></span><br><span class="line"><span class="code">---------------------</span></span><br><span class="line"><span class="code">[ 1, 2, 4, 4, 5, 10, 100, 65, 10, 90 ]</span></span><br><span class="line"><span class="code">---------------------</span></span><br><span class="line"><span class="meta">[ 1, 2, 4, 4, 5, 10, 10, 65, 100, 90 ]</span></span><br><span class="line"><span class="code">---------------------</span></span><br><span class="line"><span class="code">[ 1, 2, 4, 4, 5, 10, 10, 65, 100, 90 ]</span></span><br><span class="line"><span class="code">---------------------</span></span><br><span class="line"><span class="meta">[ 1, 2, 4, 4, 5, 10, 10, 65, 90, 100 ]</span></span><br><span class="line"><span class="code">---------------------</span></span><br><span class="line"><span class="code">[ 1, 2, 4, 4, 5, 10, 10, 65, 90, 100 ]</span></span><br><span class="line"><span class="code">---------------------</span></span><br><span class="line"><span class="meta">[ 1, 2, 4, 4, 5, 10, 10, 65, 90, 100 ]</span></span><br><span class="line">*/</span><br></pre></td></tr></table></figure>
@@ -311,19 +311,19 @@
 </script>
 <div class="Last-Next">
     
-    <a href="/2022/03/30/%E4%BA%BA%E7%94%9F%E4%BD%95%E5%BF%85%E5%A4%AA%E5%A4%8D%E6%9D%82/">
+    <a href="/2022/03/29/%E6%B8%A9%E6%9F%94%E5%92%8C%E5%96%84%E8%89%AF/">
         <div class="last">
             <span>上一篇</span>
-            <p>人生何必太复杂</p>
+            <p>温柔和善良</p>
         </div>
     </a>
     
 
     
-    <a href="/2021/07/05/%E5%BA%9F%E5%A2%9F%E9%87%8C%E7%9A%84%E5%85%89%E6%98%AF%E8%87%AA%E5%B7%B1/">
+    <a href="/2021/07/10/%E5%BD%92%E6%9D%A5%E4%BB%8D%E6%98%AF%E5%B0%91%E5%B9%B4/">
         <div class="next">
             <span>下一篇</span>
-            <p>废墟里的光是自己</p>
+            <p>缘</p>
         </div>
     </a>
     
@@ -339,7 +339,7 @@
 	</div>
 	<div class="contact">
 		
-		<a target="_blank" rel="noopener" href="https://xiaohao-1314.github.io/">
+		<a target="_blank" rel="noopener" href="https://gitee.com/liershuang/hexo-theme-quiet-ext&#39;">
 			<img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
 		</a>
 		
