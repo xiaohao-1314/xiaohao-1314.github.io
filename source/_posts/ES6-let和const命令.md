@@ -1,7 +1,10 @@
 ---
 title: ES6 let和const命令
+categories: ES6
 date: 2021-05-16 15:05:04
-tags: ES6 let和const命令
+tags: 
+      - ES6 
+      - let和const命令
 ---
 ## let命令
 1.变量不能重复声明
@@ -23,7 +26,6 @@ console.log(girl) //error
 console.log(song)   //error
 let song='时间管理大师'
 ```
-<!-- more -->
 4.不影响作用域链
 ``` bash
 let school='abc'

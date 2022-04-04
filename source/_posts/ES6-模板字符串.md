@@ -1,7 +1,10 @@
 ---
 title: ES6-模板字符串
+categories: ES6
 date: 2021-05-16 22:34:24
-tags: ES6 模板字符串
+tags: 
+     - ES6 
+     - 模板字符串
 ---
 ### 1.声明
 ``` bash
@@ -28,4 +31,3 @@ tags: ES6 模板字符串
         let out = `${name}是最帅的`;
         console.log(out);
 ```
-<!-- more -->

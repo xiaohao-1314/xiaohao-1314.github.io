@@ -1,7 +1,10 @@
 ---
 title: ES6-get/set
+categories: ES6
 date: 2021-06-23 10:48:25
-tags:  ES6 get/set
+tags:  
+      - ES6 
+      - get/set
 ---
 ```bash
 <script>

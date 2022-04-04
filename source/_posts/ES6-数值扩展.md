@@ -1,8 +1,12 @@
 ---
 title: ES6-数值扩展
+categories: ES6
 date: 2021-06-23 12:10:35
-tags:  ES6 数值扩展
+tags:  
+     - ES6 
+     - 数值扩展
 ---
+
 ```bash
 <script>
    // Number.EPSILON是 JavaScript的最小精度，属性的值接近于 2.22044...E-16
@@ -17,7 +21,6 @@ tags:  ES6 数值扩展
    console.log(equal(0.1 + 0.2 === 0.3))  //false
    console.log(equal(0.1+0.2,0.3))  //true
 ```
-<!-- more -->
 ```bash
    //二进制和八进制
    let b = 0b1010; //2进制

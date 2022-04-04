@@ -1,40 +1,16 @@
 ---
 title: Hello World
+categories: 生活
+date: 2022-04-04 11:17:04
+tags:  
+      - 生活
 ---
-Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
+Hello，我是小豪，一个喜欢分享，并想通过分享让你感受美好、有所收获的男孩子。越长大越懂得，男生间的友谊更细水长流。  
 
-js中的DOM操作
-https://www.cnblogs.com/zxt-17862802783/p/7498790.html
-## Quick Start
+学生时期开始的友谊，更多是一种知根知底的陪伴，我见过你每个时期的样子，或丑或美我都在工作以后，尤其是毕业以后的友谊，更多是一种共同成长和互相成就，会因为对方的幸福和成绩而开心。 
 
-### Create a new post
+很多朋友只会陪你走一段路，还能一直陪在身边的，一定要好好珍惜。  
 
-``` bash
-$ hexo new "My New Post"
-```
+其实生活圈不难，可以是与人的相处，可以是你吃到的美食或去到好玩的地方，也可以是对某个社会热点的感悟。  
 
-More info: [Writing](https://hexo.io/docs/writing.html)
-
-### Run server
-
-``` bash
-$ hexo server
-```
-
-More info: [Server](https://hexo.io/docs/server.html)
-
-### Generate static files
-
-``` bash
-$ hexo generate
-```
-
-More info: [Generating](https://hexo.io/docs/generating.html)
-
-### Deploy to remote sites
-
-``` bash
-$ hexo deploy
-```
-
-More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
+只要真实的表达，去说故事或分享对他人有用的讯息，就能引起关注、引发共鸣。  

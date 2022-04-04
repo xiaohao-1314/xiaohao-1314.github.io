@@ -1,9 +1,13 @@
 ---
 title: ES6-箭头函数
+categories: ES6
 date: 2021-05-16 22:50:11
-tags: ES6 箭头函数
+tags: 
+     - ES6 
+     - 箭头函数
 ---
-ES6允许使用箭头（=>）定义函数,俗称箭头函数
+### 什么是箭头函数
+ES6允许使用箭头（=>）定义函数,俗称箭头函数  
 ``` bash
        //普通写法
        let fn = function(){
@@ -37,7 +41,6 @@ ES6允许使用箭头（=>）定义函数,俗称箭头函数
           getName.call(shcool);//小豪
           getName2.call(shcool);//xiaohao
 ```
-<!-- more -->
 ### 2.不能作为构造函数
 ``` bash
            let Person = (name,age) => {

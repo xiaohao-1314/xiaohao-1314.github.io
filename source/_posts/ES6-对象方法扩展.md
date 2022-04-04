@@ -1,7 +1,10 @@
 ---
 title: ES6-对象方法扩展
+categories: ES6
 date: 2021-06-23 12:25:09
-tags:  ES6 对象方法扩展
+tags:  
+     - ES6 
+     - 对象方法扩展
 ---
 ```bash
 <script>

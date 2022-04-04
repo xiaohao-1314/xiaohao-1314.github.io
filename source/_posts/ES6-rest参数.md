@@ -1,7 +1,10 @@
 ---
 title: ES6-rest参数
+categories: ES6
 date: 2021-06-03 13:52:14
-tags: ES6 rest参数
+tags: 
+     - ES6 
+     - rest参数
 ---
 ES6引入rest参数，用于获取函数的实参，用来代替arguments
 ### 1.首先来看一下ES5获取参数的方式
@@ -21,7 +24,6 @@ ES6引入rest参数，用于获取函数的实参，用来代替arguments
         date("xiaohao","ahao","hexo");
         //获取的是一个数组
 ```
-<!-- more -->
 rest参数必须放到参数最后,否则就会报错
 ```bash
             function fn(a,b,...args) {

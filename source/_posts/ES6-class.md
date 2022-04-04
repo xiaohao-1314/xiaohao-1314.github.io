@@ -1,9 +1,12 @@
 ---
 title: ES6-class
+categories: ES6
 date: 2021-06-23 10:27:33
-tags:  ES6 class
+tags:  
+     - ES6 
+     - class
 ---
-### 定义
+### 定义  
 ES6提供了更接近传统语言的写法，引入了Class（类）这个概念，作为对象的模板。通过class关键字，可以定义类。基本上，ES6的class可以看作只是一个语法糖，它的绝大部分功能，ES5都可以做到，新的class写法只是让对象原型的写法更加清晰、更像面向对象编程的语法而已。
 
 ```bash
@@ -24,7 +27,6 @@ ES6提供了更接近传统语言的写法，引入了Class（类）这个概念
 </script>
 ```
 ### 静态成员
-<!-- more -->
 ```bash
 <script>
         //class静态成员

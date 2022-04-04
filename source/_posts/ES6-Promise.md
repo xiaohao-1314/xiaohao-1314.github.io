@@ -1,8 +1,12 @@
 ---
 title: ES6-Promise
+categories: ES6
 date: 2021-06-22 18:46:56
-tags: ES6 Promise
+tags:
+      - ES6 
+      - Promise
 ---
+### 什么是promise
 定义：Promise是ES6引入的异步编程的新解决方案。语法上 Promise是一个构造函数，用来封装异步操作并可以获取其成功或失败的结果。
 ```bash
 <script>
@@ -27,7 +31,6 @@ tags: ES6 Promise
     </script>
 ```
 ### Promise的then()方法
-<!-- more -->
 ```bash
         <script>
             const p =new Promise((resolve, reject) =>{

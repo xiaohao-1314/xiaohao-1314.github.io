@@ -10,11 +10,8 @@
 <link rel="shortcut icon" type="image/x-icon" href="/image/img.ico">
 
 
-<meta name="keywords" content="ES6 rest参数,">
-<meta name="description" content="<p>ES6引入rest参数，用于获取函数的实参，用来代替arguments</p>
-<h3 id="1-首先来看一下ES5获取参数的方式"><a href="#1-首先来看一下ES5获取参数的方式" class="headerlink" title="1.首先来看一下ES5获取参数的方式"></a>1.首先来看一下ES5获取参数的方式</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">    <span class="keyword">function</span> <span class="function"><span class="title">data</span></span>()&#123;</span><br><span class="line">    console.log(arguments);</span><br><span class="line">    //获取的是一个对象</span><br><span class="line">&#125;</span><br><span class="line">data(<span class="string">&quot;xiaohao&quot;</span>,<span class="string">&quot;ahao&quot;</span>,<span class="string">&quot;hexo&quot;</span>);</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-ES6使用rest参数"><a href="#2-ES6使用rest参数" class="headerlink" title="2.ES6使用rest参数"></a>2.ES6使用rest参数</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">    <span class="keyword">function</span> <span class="built_in">date</span>(...args)&#123;</span><br><span class="line">    console.log(args);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">date</span>(<span class="string">&quot;xiaohao&quot;</span>,<span class="string">&quot;ahao&quot;</span>,<span class="string">&quot;hexo&quot;</span>);</span><br><span class="line">//获取的是一个数组</span><br></pre></td></tr></table></figure>">
+<meta name="keywords" content="ES6,rest参数,">
+<meta name="description" content="">
 
 
 <script src="/js/jquery.min.js"></script>
@@ -248,7 +245,9 @@
         <ul class="tag">
             
             
-            <li><a href="/tags/ES6 rest参数">ES6 rest参数</a></li>
+            <li><a href="/tags/ES6">ES6</a></li>
+            
+            <li><a href="/tags/rest参数">rest参数</a></li>
             
             
         </ul>
@@ -275,7 +274,6 @@
 <h3 id="1-首先来看一下ES5获取参数的方式"><a href="#1-首先来看一下ES5获取参数的方式" class="headerlink" title="1.首先来看一下ES5获取参数的方式"></a>1.首先来看一下ES5获取参数的方式</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">    <span class="keyword">function</span> <span class="function"><span class="title">data</span></span>()&#123;</span><br><span class="line">    console.log(arguments);</span><br><span class="line">    //获取的是一个对象</span><br><span class="line">&#125;</span><br><span class="line">data(<span class="string">&quot;xiaohao&quot;</span>,<span class="string">&quot;ahao&quot;</span>,<span class="string">&quot;hexo&quot;</span>);</span><br></pre></td></tr></table></figure>
 
 <h3 id="2-ES6使用rest参数"><a href="#2-ES6使用rest参数" class="headerlink" title="2.ES6使用rest参数"></a>2.ES6使用rest参数</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">    <span class="keyword">function</span> <span class="built_in">date</span>(...args)&#123;</span><br><span class="line">    console.log(args);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">date</span>(<span class="string">&quot;xiaohao&quot;</span>,<span class="string">&quot;ahao&quot;</span>,<span class="string">&quot;hexo&quot;</span>);</span><br><span class="line">//获取的是一个数组</span><br></pre></td></tr></table></figure>
-<span id="more"></span>
 <p>rest参数必须放到参数最后,否则就会报错</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">  <span class="keyword">function</span> fn(a,b,...args) &#123;</span><br><span class="line">  console.log(a);</span><br><span class="line">  console.log(b);</span><br><span class="line">  console.log(args);</span><br><span class="line">&#125;</span><br><span class="line">fn(1,2,3,4,5,6,7,8,9);</span><br><span class="line">//1</span><br><span class="line">//2</span><br><span class="line">//[3,4,5,6,7,8,9]</span><br></pre></td></tr></table></figure>
 <p>rest参数放在a和b中，获取最前面，都会报错。</p>

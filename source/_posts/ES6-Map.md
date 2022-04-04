@@ -1,7 +1,10 @@
 ---
 title: ES6-Map
+categories: ES6
 date: 2021-06-23 10:17:04
-tags:  ES6 Map
+tags:  
+      - ES6 
+      - Map
 ---
 ### 定义
 ES6提供了Map数据结构。它类似于对象，也是键值对的集合。但是“键”的范围不限于字符串，各种类型的值（包括对象）都可以当作键。Map也实现了iterator接口，所以可以使用『扩展运算符』和「for…of…』进行遍历。Map的属性和方法。
