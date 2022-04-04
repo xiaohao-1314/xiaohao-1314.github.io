@@ -5,7 +5,7 @@ date: 2022-03-28 14:56:38
 tags:
      - JavaScript
 ---
-js算法排序可视化网站：链接: [https://visualgo.net/en](https://www.csdn.net/)
+js算法排序可视化网站：链接: [https://visualgo.net](https://www.csdn.net/)
 # 冒泡排序
 ```
 function BubbleSort(array) {
