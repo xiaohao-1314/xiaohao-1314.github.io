@@ -10,9 +10,8 @@
 <link rel="shortcut icon" type="image/x-icon" href="/image/img.ico">
 
 
-<meta name="keywords" content="ES6 扩展运算符,">
-<meta name="description" content="<h3 id="扩展运算符能将-数组-转换为逗号分隔的-参数序列"><a href="#扩展运算符能将-数组-转换为逗号分隔的-参数序列" class="headerlink" title="[..]扩展运算符能将[数组]转换为逗号分隔的[参数序列]"></a>[..]扩展运算符能将[数组]转换为逗号分隔的[参数序列]</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">//声明一个数组...</span><br><span class="line">const tfboys = [<span class="string">&#x27;易烊千玺&#x27;</span>,<span class="string">&#x27;王源&#x27;</span>,<span class="string">&#x27;王俊凯&#x27;</span>];</span><br><span class="line"></span><br><span class="line">//声明一个函数</span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">wang</span></span>() &#123;</span><br><span class="line">    console.log(arguments);</span><br><span class="line">  &#125;</span><br><span class="line">  wang(tfboys);//0: (3) [<span class="string">&quot;易烊千玺&quot;</span>, <span class="string">&quot;王源&quot;</span>, <span class="string">&quot;王俊凯&quot;</span>] 只有一个</span><br><span class="line">  wang(...tfboys);</span><br><span class="line">//   0: <span class="string">&quot;易烊千玺&quot;</span></span><br><span class="line">//   1: <span class="string">&quot;王源&quot;</span></span><br><span class="line">//   2: <span class="string">&quot;王俊凯&quot;</span></span><br></pre></td></tr></table></figure>
-<h3 id="扩展运算符的应用"><a href="#扩展运算符的应用" class="headerlink" title="扩展运算符的应用"></a>扩展运算符的应用</h3><p>1)数组的合并</p>">
+<meta name="keywords" content="ES6,扩展运算符,">
+<meta name="description" content="">
 
 
 <script src="/js/jquery.min.js"></script>
@@ -246,7 +245,9 @@
         <ul class="tag">
             
             
-            <li><a href="/tags/ES6 扩展运算符">ES6 扩展运算符</a></li>
+            <li><a href="/tags/ES6">ES6</a></li>
+            
+            <li><a href="/tags/扩展运算符">扩展运算符</a></li>
             
             
         </ul>
@@ -271,7 +272,6 @@
     <div id="article" class="content">
         <h3 id="扩展运算符能将-数组-转换为逗号分隔的-参数序列"><a href="#扩展运算符能将-数组-转换为逗号分隔的-参数序列" class="headerlink" title="[..]扩展运算符能将[数组]转换为逗号分隔的[参数序列]"></a>[..]扩展运算符能将[数组]转换为逗号分隔的[参数序列]</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">//声明一个数组...</span><br><span class="line">const tfboys = [<span class="string">&#x27;易烊千玺&#x27;</span>,<span class="string">&#x27;王源&#x27;</span>,<span class="string">&#x27;王俊凯&#x27;</span>];</span><br><span class="line"></span><br><span class="line">//声明一个函数</span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">wang</span></span>() &#123;</span><br><span class="line">    console.log(arguments);</span><br><span class="line">  &#125;</span><br><span class="line">  wang(tfboys);//0: (3) [<span class="string">&quot;易烊千玺&quot;</span>, <span class="string">&quot;王源&quot;</span>, <span class="string">&quot;王俊凯&quot;</span>] 只有一个</span><br><span class="line">  wang(...tfboys);</span><br><span class="line">//   0: <span class="string">&quot;易烊千玺&quot;</span></span><br><span class="line">//   1: <span class="string">&quot;王源&quot;</span></span><br><span class="line">//   2: <span class="string">&quot;王俊凯&quot;</span></span><br></pre></td></tr></table></figure>
 <h3 id="扩展运算符的应用"><a href="#扩展运算符的应用" class="headerlink" title="扩展运算符的应用"></a>扩展运算符的应用</h3><p>1)数组的合并</p>
-<span id="more"></span>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">const kuaizi = [<span class="string">&#x27;王太利&#x27;</span>,<span class="string">&#x27;肖央&#x27;</span>];</span><br><span class="line">const fenghuang = [<span class="string">&#x27;曾毅&#x27;</span>,<span class="string">&#x27;玲花&#x27;</span>];</span><br><span class="line">//以前的做法就是concat()</span><br><span class="line">// const zuixuanxiaopingguo = kuaizi.concat(fenghuang);</span><br><span class="line"></span><br><span class="line">//但现在可以使用扩展运算符</span><br><span class="line">const  zuixuanxiaopingguo = [...kuaizi,...fenghuang];</span><br><span class="line">console.log(zuixuanxiaopingguo);//[<span class="string">&#x27;王太利&#x27;</span>,<span class="string">&#x27;肖央&#x27;</span>,<span class="string">&#x27;曾毅&#x27;</span>,<span class="string">&#x27;玲花&#x27;</span>]</span><br></pre></td></tr></table></figure>
 
 <p>2)数组克隆</p>

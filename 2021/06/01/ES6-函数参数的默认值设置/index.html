@@ -10,11 +10,8 @@
 <link rel="shortcut icon" type="image/x-icon" href="/image/img.ico">
 
 
-<meta name="keywords" content="ES6 函数参数的默认值设置,">
-<meta name="description" content="<p>ES6 允许给函数参数赋值初始值</p>
-<h3 id="1-形参初始值-具有默认值的参数，一般位置要靠后-潜规则"><a href="#1-形参初始值-具有默认值的参数，一般位置要靠后-潜规则" class="headerlink" title="1.形参初始值  具有默认值的参数，一般位置要靠后(潜规则)"></a>1.形参初始值  具有默认值的参数，一般位置要靠后(潜规则)</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> add(a,b,c = 10) &#123;</span><br><span class="line">    <span class="built_in">return</span> a + b + c;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">let</span> result = add(1,2);</span><br><span class="line">  console.log(result);//13</span><br><span class="line">//如果把c放在a和b中间，b就会没有赋值，打印的是NAN</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-与解构赋值结合"><a href="#2-与解构赋值结合" class="headerlink" title="2.与解构赋值结合"></a>2.与解构赋值结合</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> connect(&#123;host,username,password,port&#125;) &#123;</span><br><span class="line">    // console.log(option.username);//xiaohao</span><br><span class="line">    // console.log(option.password);//123456</span><br><span class="line">    //如果这样写，每次都要调用option，麻烦，可以直接使用解构赋值</span><br><span class="line">    console.log(host);//127.0.0.1</span><br><span class="line">    console.log(username);//xiaohao</span><br><span class="line">    console.log(password);//123456</span><br><span class="line">    console.log(port);//3306</span><br><span class="line"></span><br><span class="line">    //形参可以写成host=<span class="string">&quot;127.1.1.1&quot;</span>默认值,如果实参没有host</span><br><span class="line">    //那console.log(host)就会打印默认值，否则就打印实参</span><br><span class="line">  &#125;</span><br><span class="line">  connect(&#123;</span><br><span class="line">      host:<span class="string">&#x27;127.0.0.1&#x27;</span>,</span><br><span class="line">      username:<span class="string">&#x27;xiaohao&#x27;</span>,</span><br><span class="line">      password:<span class="string">&#x27;123456&#x27;</span>,</span><br><span class="line">      port:3306</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>">
+<meta name="keywords" content="ES6,函数参数的默认值设置,">
+<meta name="description" content="">
 
 
 <script src="/js/jquery.min.js"></script>
@@ -248,7 +245,9 @@
         <ul class="tag">
             
             
-            <li><a href="/tags/ES6 函数参数的默认值设置">ES6 函数参数的默认值设置</a></li>
+            <li><a href="/tags/ES6">ES6</a></li>
+            
+            <li><a href="/tags/函数参数的默认值设置">函数参数的默认值设置</a></li>
             
             
         </ul>
@@ -271,11 +270,9 @@
 </div>
 <div class="article-content">
     <div id="article" class="content">
-        <p>ES6 允许给函数参数赋值初始值</p>
-<h3 id="1-形参初始值-具有默认值的参数，一般位置要靠后-潜规则"><a href="#1-形参初始值-具有默认值的参数，一般位置要靠后-潜规则" class="headerlink" title="1.形参初始值  具有默认值的参数，一般位置要靠后(潜规则)"></a>1.形参初始值  具有默认值的参数，一般位置要靠后(潜规则)</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> add(a,b,c = 10) &#123;</span><br><span class="line">    <span class="built_in">return</span> a + b + c;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">let</span> result = add(1,2);</span><br><span class="line">  console.log(result);//13</span><br><span class="line">//如果把c放在a和b中间，b就会没有赋值，打印的是NAN</span><br></pre></td></tr></table></figure>
+        <h3 id="ES6-允许给函数参数赋值初始值"><a href="#ES6-允许给函数参数赋值初始值" class="headerlink" title="ES6 允许给函数参数赋值初始值"></a>ES6 允许给函数参数赋值初始值</h3><h3 id="1-形参初始值-具有默认值的参数，一般位置要靠后-潜规则"><a href="#1-形参初始值-具有默认值的参数，一般位置要靠后-潜规则" class="headerlink" title="1.形参初始值  具有默认值的参数，一般位置要靠后(潜规则)"></a>1.形参初始值  具有默认值的参数，一般位置要靠后(潜规则)</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> add(a,b,c = 10) &#123;</span><br><span class="line">    <span class="built_in">return</span> a + b + c;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">let</span> result = add(1,2);</span><br><span class="line">  console.log(result);//13</span><br><span class="line">//如果把c放在a和b中间，b就会没有赋值，打印的是NAN</span><br></pre></td></tr></table></figure>
 
 <h3 id="2-与解构赋值结合"><a href="#2-与解构赋值结合" class="headerlink" title="2.与解构赋值结合"></a>2.与解构赋值结合</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> connect(&#123;host,username,password,port&#125;) &#123;</span><br><span class="line">    // console.log(option.username);//xiaohao</span><br><span class="line">    // console.log(option.password);//123456</span><br><span class="line">    //如果这样写，每次都要调用option，麻烦，可以直接使用解构赋值</span><br><span class="line">    console.log(host);//127.0.0.1</span><br><span class="line">    console.log(username);//xiaohao</span><br><span class="line">    console.log(password);//123456</span><br><span class="line">    console.log(port);//3306</span><br><span class="line"></span><br><span class="line">    //形参可以写成host=<span class="string">&quot;127.1.1.1&quot;</span>默认值,如果实参没有host</span><br><span class="line">    //那console.log(host)就会打印默认值，否则就打印实参</span><br><span class="line">  &#125;</span><br><span class="line">  connect(&#123;</span><br><span class="line">      host:<span class="string">&#x27;127.0.0.1&#x27;</span>,</span><br><span class="line">      username:<span class="string">&#x27;xiaohao&#x27;</span>,</span><br><span class="line">      password:<span class="string">&#x27;123456&#x27;</span>,</span><br><span class="line">      port:3306</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
-<span id="more"></span>
     </div>
 </div>
 <style>
