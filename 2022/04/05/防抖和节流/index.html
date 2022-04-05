@@ -3,14 +3,14 @@
 
 	<head>
 		
-<title>接受成长-Quiet</title>
+<title>防抖和节流-Quiet</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" type="image/x-icon" href="/image/img.ico">
 
 
-<meta name="keywords" content="生活点滴,">
+<meta name="keywords" content="JavaScript,">
 <meta name="description" content="">
 
 
@@ -245,11 +245,11 @@
         <ul class="tag">
             
             
-            <li><a href="/tags/生活点滴">生活点滴</a></li>
+            <li><a href="/tags/JavaScript">JavaScript</a></li>
             
             
         </ul>
-        <h1>接受成长</h1>
+        <h1>防抖和节流</h1>
         <div class="article-info">
             <div class="article-author">
                 
@@ -261,23 +261,21 @@
                 </svg>
                 
                 <span> <a href="">Xiao Hao</a></span>
-                <p>2022-04-03 21:57:16</p>
+                <p>2022-04-05 16:47:18</p>
             </div>
         </div>
     </div>
 </div>
 <div class="article-content">
     <div id="article" class="content">
-        <pre><code>接受成长，也要接受所有的不欢而散  
+        <h3 id="什么是防抖"><a href="#什么是防抖" class="headerlink" title="什么是防抖"></a>什么是防抖</h3><p>高频率触发的事件,在指定的单位时间内，只响应最后一次，如果在指定的时间在触发，则重新计算时间(后面触发的事件执行，替代了前面的事件)</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//简单写法</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">debounce</span>(<span class="params">func, wait</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> timeout;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">clearTimeout</span>(timeout);</span><br><span class="line">            timeout = <span class="built_in">setTimeout</span>(func, wait)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//复杂写法</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">debounce</span>(<span class="params">fn,time</span>) &#123;</span><br><span class="line">      <span class="keyword">let</span> timeout = <span class="literal">null</span>; <span class="comment">// 创建一个标记用来存放定时器的返回值</span></span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="built_in">clearTimeout</span>(timeout); <span class="comment">// 每当用户输入的时候把前一个 setTimeout clear 掉</span></span><br><span class="line">        timeout = <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123; <span class="comment">// 然后又创建一个新的 setTimeout, 这样就能保证输入字符后的 interval 间隔内如果还有字符输入的话，就不会执行 fn 函数</span></span><br><span class="line">          fn.<span class="title function_">apply</span>(<span class="variable language_">this</span>, <span class="variable language_">arguments</span>);<span class="comment">//arguments是传入的参数</span></span><br><span class="line">        &#125;, time);</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">sayHi</span>(<span class="params"></span>) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;防抖成功&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> inp = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;inp&#x27;</span>);</span><br><span class="line">    inp.<span class="title function_">addEventListener</span>(<span class="string">&#x27;input&#x27;</span>, <span class="title function_">debounce</span>(sayHi,<span class="number">5000</span>)); <span class="comment">// 防抖</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-你要做一个不动声色的大人了。不准情绪化，不准偷偷想念，不准回头看。去过自己另外的生活。你要听话，不是所有的鱼都会生活在同一片海里。      --村上春树   
+<h3 id="什么是节流"><a href="#什么是节流" class="headerlink" title="什么是节流"></a>什么是节流</h3><p>高频率触发的事件,在指定的单位时间内，只响应第一次(前面触发的执行前，忽略后面的事件)</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//简单写法</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">throttle</span>(<span class="params">func, wait</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> timeout;</span><br><span class="line">    <span class="keyword">let</span> startTime = <span class="title class_">Date</span>.<span class="title function_">now</span>();</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="built_in">clearTimeout</span>(timeout)</span><br><span class="line">        <span class="keyword">let</span> curTime = <span class="title class_">Date</span>.<span class="title function_">now</span>();</span><br><span class="line">        <span class="keyword">if</span> (curTime - startTime &lt;= wait) &#123;</span><br><span class="line">            timeout = <span class="built_in">setTimeout</span>(func, wait)</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            startTime = curTime;</span><br><span class="line">            <span class="title function_">func</span>()</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//复杂写法</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">throttle</span>(<span class="params">fn，time</span>) &#123;</span><br><span class="line">      <span class="keyword">let</span> canRun = <span class="literal">true</span>; <span class="comment">// 通过闭包保存一个标记</span></span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (!canRun) <span class="keyword">return</span>; <span class="comment">// 在函数开头判断标记是否为true，不为true则return</span></span><br><span class="line">        canRun = <span class="literal">false</span>; <span class="comment">// 立即设置为false</span></span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123; <span class="comment">// 将外部传入的函数的执行放在setTimeout中</span></span><br><span class="line">          fn.<span class="title function_">apply</span>(<span class="variable language_">this</span>, <span class="variable language_">arguments</span>);</span><br><span class="line">          <span class="comment">// 最后在setTimeout执行完毕后再把标记设置为true(关键)表示可以执行下一次循环了。当定时器没有执行的时候标记永远是false，在开头被return掉</span></span><br><span class="line">          canRun = <span class="literal">true</span>;</span><br><span class="line">        &#125;, time);</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">sayHi</span>(<span class="params">e</span>) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(e.<span class="property">target</span>.<span class="property">innerWidth</span>, e.<span class="property">target</span>.<span class="property">innerHeight</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;resize&#x27;</span>, <span class="title function_">throttle</span>(sayHi,<span class="number">500</span>));</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-成年人的崩溃往往以一句“没事”结尾，因为他们知道自己的残局，只能自己收拾。我们遇到有很多的人，对于我们的结局会遗憾会叹息，可是那些发生的事，早已经在我们心里尘埃落定。我想我没有说错吧。  
-
-成长的道路_上总有更加新奇的事情，更加有趣的新朋友;又或者一起走到几程，突然发现其实志不同，道也不同。我们不再像小时候那样非要对方陪着，而是，不欢而散，各自上路，一路拋弃。  
-
-可是无论这个世界对你怎样，别人对你怎样，我们也要接受，接受所有的不欢而散，但是我依旧希望你要一如既往的勇敢，努力，充满希望又热泪盈眶。    
-</code></pre>
+<h3 id="防抖和节流的使用场景"><a href="#防抖和节流的使用场景" class="headerlink" title="防抖和节流的使用场景"></a>防抖和节流的使用场景</h3><p>防抖（debounce）<br>1.search搜索联想，用户在不断输入值时，用防抖来节约请求资源。<br>2.window触发resize的时候，不断的调整浏览器窗口大小会不断的触发这个事件，用防抖来让其只触发一次</p>
+<p>节流（throttle）<br>1.鼠标不断点击触发，mousedown(单位时间内只触发一次)<br>2.监听滚动事件，比如是否滑到底部自动加载更多，用throttle来判断</p>
 
     </div>
 </div>
@@ -307,19 +305,19 @@
 </script>
 <div class="Last-Next">
     
-    <a href="/2022/04/04/%E8%BF%BD%E9%A3%8E%E7%AD%9D%E7%9A%84%E4%BA%BA/">
+    <a href="/2022/04/05/%E6%89%8B%E5%86%99new%E6%96%B9%E6%B3%95%E5%92%8Cpromise%E6%96%B9%E6%B3%95/">
         <div class="last">
             <span>上一篇</span>
-            <p>《追风筝的人》| 直面不完美的自己</p>
+            <p>手写new方法和promise方法</p>
         </div>
     </a>
     
 
     
-    <a href="/2022/04/02/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+    <a href="/2022/04/04/%E8%BF%BD%E9%A3%8E%E7%AD%9D%E7%9A%84%E4%BA%BA/">
         <div class="next">
             <span>下一篇</span>
-            <p>正则表达式</p>
+            <p>《追风筝的人》| 直面不完美的自己</p>
         </div>
     </a>
     
