@@ -3,14 +3,14 @@
 
 	<head>
 		
-<title>接受成长-Quiet</title>
+<title>手写new方法和promise方法-Quiet</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" type="image/x-icon" href="/image/img.ico">
 
 
-<meta name="keywords" content="生活点滴,">
+<meta name="keywords" content="JavaScript,">
 <meta name="description" content="">
 
 
@@ -245,11 +245,11 @@
         <ul class="tag">
             
             
-            <li><a href="/tags/生活点滴">生活点滴</a></li>
+            <li><a href="/tags/JavaScript">JavaScript</a></li>
             
             
         </ul>
-        <h1>接受成长</h1>
+        <h1>手写new方法和promise方法</h1>
         <div class="article-info">
             <div class="article-author">
                 
@@ -261,24 +261,16 @@
                 </svg>
                 
                 <span> <a href="">Xiao Hao</a></span>
-                <p>2022-04-03 21:57:16</p>
+                <p>2022-04-05 17:05:57</p>
             </div>
         </div>
     </div>
 </div>
 <div class="article-content">
     <div id="article" class="content">
-        <pre><code>接受成长，也要接受所有的不欢而散  
+        <h3 id="手写new方法"><a href="#手写new方法" class="headerlink" title="手写new方法"></a>手写new方法</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">parent</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">name</span> = <span class="string">&quot;xiaohao&quot;</span></span><br><span class="line">&#125;</span><br><span class="line">parent.<span class="property"><span class="keyword">prototype</span></span> = &#123;</span><br><span class="line">    <span class="attr">walk</span>: <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;walk&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">newfn</span>(<span class="params">fn</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> fn != <span class="string">&#x27;function&#x27;</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> son = &#123;&#125;</span><br><span class="line">    fn.<span class="title function_">call</span>(son)</span><br><span class="line">    fn.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">constructor</span> = fn;</span><br><span class="line">    son.<span class="property">__proto__</span> = fn.<span class="property"><span class="keyword">prototype</span></span>;</span><br><span class="line">    <span class="keyword">return</span> son;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> son1 = <span class="title function_">newfn</span>(parent);</span><br><span class="line">son1.<span class="title function_">walk</span>();</span><br></pre></td></tr></table></figure>
 
-你要做一个不动声色的大人了。不准情绪化，不准偷偷想念，不准回头看。去过自己另外的生活。你要听话，不是所有的鱼都会生活在同一片海里。      --村上春树   
-
-成年人的崩溃往往以一句“没事”结尾，因为他们知道自己的残局，只能自己收拾。我们遇到有很多的人，对于我们的结局会遗憾会叹息，可是那些发生的事，早已经在我们心里尘埃落定。我想我没有说错吧。  
-
-成长的道路_上总有更加新奇的事情，更加有趣的新朋友;又或者一起走到几程，突然发现其实志不同，道也不同。我们不再像小时候那样非要对方陪着，而是，不欢而散，各自上路，一路拋弃。  
-
-可是无论这个世界对你怎样，别人对你怎样，我们也要接受，接受所有的不欢而散，但是我依旧希望你要一如既往的勇敢，努力，充满希望又热泪盈眶。    
-</code></pre>
-
+<h3 id="手写promise方法"><a href="#手写promise方法" class="headerlink" title="手写promise方法"></a>手写promise方法</h3><figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">promise</span> </span>&#123;</span><br><span class="line">    construtctor(executor) &#123;</span><br><span class="line">        <span class="keyword">this</span>.state = <span class="string">&quot;pedding&quot;</span></span><br><span class="line">        <span class="keyword">this</span>.value = <span class="literal">null</span>;</span><br><span class="line">        <span class="keyword">this</span>.reason = <span class="literal">null</span>;</span><br><span class="line">        <span class="keyword">this</span>.onFulfilledCallBack = []</span><br><span class="line">        <span class="keyword">this</span>.onRejectedCallBack = []</span><br><span class="line"></span><br><span class="line">        function resolve(value) &#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="keyword">this</span>.state == <span class="string">&quot;pedding&quot;</span>) &#123;</span><br><span class="line">                <span class="keyword">this</span>.state = <span class="string">&quot;fulfilled&quot;</span></span><br><span class="line">                <span class="keyword">this</span>.value = value</span><br><span class="line">                <span class="keyword">this</span>.onFulfilledCallBack.foreach(item =&gt; item(<span class="keyword">this</span>.value))</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        function reject(reason) &#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="keyword">this</span>.state == <span class="string">&quot;pedding&quot;</span>) &#123;</span><br><span class="line">                <span class="keyword">this</span>.state = <span class="string">&quot;rejected&quot;</span></span><br><span class="line">                <span class="keyword">this</span>.reason = reason;</span><br><span class="line">                <span class="keyword">this</span>.onRejectedCallBack.foreach(item =&gt; item(<span class="keyword">this</span>.reason))</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            executor(resolve, reject)</span><br><span class="line">        &#125; <span class="keyword">catch</span> (error) &#123;</span><br><span class="line">            reject(error)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    then(onFulfilled, onRejected) &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.state == <span class="string">&quot;fulfilled&quot;</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> new promise((resolve, reject) =&gt; &#123;</span><br><span class="line">                onFulfilled(<span class="keyword">this</span>.value)</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.state == <span class="string">&quot;rejected&quot;</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> new promise((resolve, reject) =&gt; &#123;</span><br><span class="line">                onRejected(<span class="keyword">this</span>.reason)</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.state == <span class="string">&quot;pedding&quot;</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> new promise((resolve, reject) =&gt; &#123;</span><br><span class="line">                <span class="keyword">this</span>.onFulfilledCallBack.push(onFulfilled)</span><br><span class="line">                <span class="keyword">this</span>.onRejectedCallBack.push(onRejected)</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </div>
 </div>
 <style>
@@ -307,19 +299,19 @@
 </script>
 <div class="Last-Next">
     
-    <a href="/2022/04/04/%E8%BF%BD%E9%A3%8E%E7%AD%9D%E7%9A%84%E4%BA%BA/">
+    <a href="/2022/04/05/18%E4%B8%AAJS%E7%9A%84%E5%8D%95%E8%A1%8C%E4%BB%A3%E7%A0%81%E6%8A%80%E5%B7%A7/">
         <div class="last">
             <span>上一篇</span>
-            <p>《追风筝的人》| 直面不完美的自己</p>
+            <p>18个JS的单行代码技巧</p>
         </div>
     </a>
     
 
     
-    <a href="/2022/04/02/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+    <a href="/2022/04/05/%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81/">
         <div class="next">
             <span>下一篇</span>
-            <p>正则表达式</p>
+            <p>防抖和节流</p>
         </div>
     </a>
     
